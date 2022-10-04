@@ -1,35 +1,29 @@
 print("Welcome to Conter No.1")
 print("Price of per ticket is 2000rs")
 print("----------------------------------------")
-n=int(input("Enter the number of person(s): "))
-fare=2000
-if n<=5:
-disc=10
-value=(fare*disc)/100
-total=fare-value
-print("Since There are ",n," persons You got 10% 
-Discount")
-print("Total Fare = ",n*total)
-elif n>5 & n<=10:
-disc=15
-value=(fare*disc)/100
-total=fare-value
-print("Since There are ",n," persons You got 15% 
-Discount")
-print("Total Fare = ",n*total)
-elif n>10 & n<=15:
-disc=20
-value=(fare*disc)/100
-total=fare-value
-print("Since There are ",n," persons You got 20% 
-Discount")
-print("Total Fare = ",n*total)
-else:
-disc=25
-value=(fare*disc)/100
-total=fare-value
-print("Since There are ",n," persons You got 25% 
-Discount")
-print("Total Fare = ",n*total)
+
+n = int(input("Enter the number of person(s): "))
+fare = 2000
+
+def discount(n):
+    if n <= 5:
+        return 10
+    elif n <= 10:
+        return 15
+    elif n <= 15:
+        return 20
+    elif n >= 15:
+        return 25
+    
+def total(n):
+    return n * fare
+
+def discount_total(n):
+    return total(n) - int(total(n) * discount(n) / 100)
+
+
+print("Total amount is: ", total(n))
+print("Discount is: ", discount(n))
+print("Total amount after discount is: ", discount_total(n))
 print("----------------------------------------")
 print("Thank You, Visit Again")

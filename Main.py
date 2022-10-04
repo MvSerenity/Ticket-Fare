@@ -30,6 +30,6 @@ value=(fare*disc)/100
 total=fare-value
 print("Since There are ",n," persons You got 25% 
 Discount")
-print("Total Fare = ",total)
+print("Total Fare = ",n*total)
 print("----------------------------------------")
 print("Thank You, Visit Again")

@@ -1,0 +1,7 @@
+ Calculate ticket fare 
+Ticket fare:2000rs/person 
+Read no. of persons(n) from the user 
+If n<=5----> give 10% discount on total ticket fare 
+If n<=10----> give 15% discount on total ticket fare 
+If n<=15----> give 20% discount on total ticket fare 
+If n>15----> give 25% discount on total ticket fare 
